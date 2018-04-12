@@ -1,0 +1,71 @@
+{
+  "name": "wt-api",
+  "version": "1.0.0",
+  "description": "wt api",
+  "main": "README.MD",
+  "private": true,
+  "license": "MIT",
+  "author": "Anton Yaskevich",
+  "contributors": [
+    {
+      "name": "Anton Yaskevich"
+    }
+  ],
+  "scripts": {
+    "compile": "tsc",
+    "dev": "node dist/src",
+    "migrations:up": "typeorm migrations:run --config migrations.config",
+    "migrations:down": "typeorm migrations:revert --config migrations.config",
+    "test": "mocha dist/test/**/*.js --exit",
+    "start": "cross-env AUTH_SECRET=secret node --inspect-brk dist/src",
+    "tslint": "tslint --fix src/**"
+  },
+  "dependencies": {
+    "moment": "^2.20.1",
+    "body-parser": "^1.18.2",
+    "multer": "^1.3.0",
+    "cross-env": "^5.1.1",
+    "passport": "^0.4.0",
+    "express": "^4.16.2",
+    "jsonwebtoken": "^8.1.0",
+    "mysql": "^2.15.0",
+    "passport-facebook": "^2.1.1",
+    "reflect-metadata": "^0.1.10",
+    "request": "^2.83.0",
+    "request-promise-native": "^1.0.5",
+    "routing-controllers": "^0.7.6",
+    "typedi": "^0.6.0",
+    "typeorm": "^0.1.8",
+    "typeorm-typedi-extensions": "^0.1.1",
+    "validator": "^9.2.0",
+    "winston": "^2.4.0",
+    "redis": "^2.8.0",
+    "bluebird": "^3.5.1",
+    "@google-cloud/storage": "^1.5.1"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.20",
+    "@types/redis": "^2.8.6",
+    "@types/moment": "^2.13.0",
+    "@types/google-cloud__storage": "^1.1.7",
+    "@types/body-parser": "^1.16.8",
+    "@types/multer": "^1.3.6",
+    "@types/chai": "^4.0.10",
+    "@types/express": "^4.0.39",
+    "@types/jsonwebtoken": "^7.2.4",
+    "@types/mocha": "^2.2.44",
+    "@types/node": "^8.0.58",
+    "@types/passport": "^0.4.1",
+    "@types/request": "^2.0.9",
+    "@types/request-promise-native": "^1.0.10",
+    "@types/supertest": "^2.0.4",
+    "@types/validator": "^6.3.0",
+    "@types/winston": "^2.3.7",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "supertest": "^3.0.0",
+    "tslint": "^5.8.0",
+    "tslint-config-standard": "^7.0.0",
+    "typescript": "^2.6.2"
+  }
+}
